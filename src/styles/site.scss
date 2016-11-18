@@ -1,0 +1,22 @@
+html {
+    background: #000;
+    color:#aaa;
+    height:100%
+}
+@font-face {
+    font-family:"Simplifica";
+    src: url("../assets/fonts/simplifica.ttf") /* TTF file for CSS3 browsers */
+}
+body {
+    min-height: 100%;
+    font-family: "Simplifica", sans-serif;
+    text-align: center;
+    position:relative;
+    font-weight: 100;
+}
+
+.main-content {
+    text-align: center;
+}
+
+@import "home"

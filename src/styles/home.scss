@@ -1,0 +1,58 @@
+#home {
+    #time {
+        letter-spacing: 6px;
+        color: #887c4f;
+        font-size: 13rem;
+        font-weight: 100;
+        margin:0;
+        position:relative;
+        top:140px
+    } 
+    #date {
+        text-align: right;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        letter-spacing: 4px;
+        .day {
+            font-size: 2.75rem;
+            text-transform: uppercase;
+        }
+        .date {
+            font-size: 1.5rem;
+        }
+    }
+
+    #weather {
+        position:fixed;
+        text-align: left;
+        top:30px;
+        left:30px;
+        letter-spacing: 4px;
+        .temperature {
+            font-size:2.5rem;
+        }
+        .description {
+            font-size:1.25rem;
+        }
+    }
+
+    #stocks {
+        width:100%;
+        position: fixed;
+        bottom: 20px;
+        font-size: 1.25rem;
+        .stock {
+            margin: 0 10px;
+
+            .percentage {
+                &.green {
+                    color: #89ab66;
+                }
+                &.red {
+                    color: #d48e8e;
+                }
+            }
+        }
+    }
+}
