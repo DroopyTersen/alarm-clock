@@ -2,17 +2,17 @@
     #time {
         letter-spacing: 6px;
         color: #887c4f;
-        font-size: 13rem;
-        font-weight: 100;
+        font-size: 15rem;
+        font-weight: normal;
         margin:0;
         position:relative;
-        top:140px
+        top:120px
     } 
     #date {
         text-align: right;
         position: fixed;
-        top: 30px;
-        right: 30px;
+        top: 15px;
+        right: 15px;
         letter-spacing: 4px;
         .day {
             font-size: 2.75rem;
@@ -26,31 +26,34 @@
     #weather {
         position:fixed;
         text-align: left;
-        top:30px;
-        left:30px;
+        top:15px;
+        left:15px;
         letter-spacing: 4px;
         .temperature {
             font-size:2.5rem;
         }
         .description {
             font-size:1.25rem;
+            /*font-weight: bold;*/
         }
     }
 
     #stocks {
         width:100%;
         position: fixed;
-        bottom: 20px;
-        font-size: 1.25rem;
+        bottom: 15px;
+        font-size: 1.5rem;
         .stock {
             margin: 0 10px;
 
             .percentage {
+                font-size: 1.4rem;
+                font-weight: normal;
                 &.green {
-                    color: #89ab66;
+                    color: #4a553e;
                 }
                 &.red {
-                    color: #d48e8e;
+                    color: #7a4f4f;
                 }
             }
         }
