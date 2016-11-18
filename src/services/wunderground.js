@@ -9,3 +9,10 @@ exports.getCurrentConditions = function(city) {
     var url = `${baseUrl}/conditions/q/WI/${city}.json`
     return request({ url, json: true}).then(data => data.current_observation);
 }
+
+exports.getForecast = function(city) {
+    city = city.replace(/ /g,"_");
+
+    var url = `${baseUrl}/forecast/q/WI/${city}.json`
+    return request({ url, json: true}).then(data => data.forecast.txt_forecast.forecastday);
+}

@@ -10,7 +10,7 @@
 #home #date {
   text-align: right;
   position: fixed;
-  top: 15px;
+  top: 10px;
   right: 15px;
   letter-spacing: 4px; }
   #home #date .day {
@@ -22,9 +22,11 @@
 #home #weather {
   position: fixed;
   text-align: left;
-  top: 15px;
+  top: 10px;
   left: 15px;
   letter-spacing: 4px; }
+  #home #weather.active {
+    color: #fff; }
   #home #weather .temperature {
     font-size: 2.5rem; }
   #home #weather .description {
@@ -34,7 +36,7 @@
 #home #stocks {
   width: 100%;
   position: fixed;
-  bottom: 15px;
+  bottom: 5px;
   font-size: 1.5rem; }
   #home #stocks .stock {
     margin: 0 10px; }

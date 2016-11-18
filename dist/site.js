@@ -110,7 +110,8 @@
 	    time: __webpack_require__(3),
 	    date: __webpack_require__(115),
 	    weatherSmall: __webpack_require__(116),
-	    stockTicker: __webpack_require__(119)
+	    stockTicker: __webpack_require__(119),
+	    forecast: __webpack_require__(122)
 	};
 
 /***/ },
@@ -15028,7 +15029,7 @@
 	    comp.container = dom.findOne(selector);
 	
 	    comp.updateWeather = function () {
-	        var url = "/api/weather/conditions/53051";
+	        var url = "/api/weather/conditions/Menomonee Falls";
 	        ajax({ url: url }).then(comp.render);
 	    };
 	
@@ -15040,6 +15041,11 @@
 	
 	    setInterval(comp.updateWeather, 60000);
 	    comp.updateWeather();
+	
+	    comp.container.addEventListener("click", function () {
+	        comp.container.classList.add("active");
+	        window.location.href = "/forecast";
+	    });
 	    return comp;
 	};
 	
@@ -15185,6 +15191,35 @@
 	        return stocks;
 	    });
 	};
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var ajax = __webpack_require__(117);
+	var dom = __webpack_require__(1);
+	var create = function create(selector) {
+	    var comp = {};
+	    comp.container = dom.findOne(selector);
+	
+	    var forecastDayToHtml = function forecastDayToHtml(forecast) {
+	        return "\n        <div class='forecast-item'>\n            <h4 class='title'>" + forecast.title + "</h4>\n            <div class='icon'><img src='" + forecast.icon_url + "'></div>\n            <p>" + forecast.fcttext + "</p>\n        </div> \n        ";
+	    };
+	
+	    comp.render = function (forecastDays) {
+	        console.log(forecastDays);
+	        var html = forecastDays.slice(0, 6).map(forecastDayToHtml).join("");
+	        comp.container.innerHTML = html;
+	    };
+	
+	    var url = "/api/weather/forecast/Menomonee Falls";
+	    ajax({ url: url }).then(comp.render);
+	    return comp;
+	};
+	
+	module.exports = { create: create };
 
 /***/ }
 /******/ ]);

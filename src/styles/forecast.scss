@@ -1,0 +1,63 @@
+$top: 10px;
+$bottom: 5px;
+$side: 15px;
+
+#forecast {
+    #time {
+        letter-spacing: 4px;
+        color: #887c4f;
+        font-size: 3rem;
+        font-weight: normal;
+        margin:0;
+        position:relative;
+        top:$top;
+    } 
+    
+    #date {
+        text-align: right;
+        position: fixed;
+        top: $top;
+        right: $side;
+        letter-spacing: 4px;
+        font-size: 1.5rem;
+        .day {
+            text-transform: uppercase;
+        }
+    }
+    #forecast-list {
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        font-weight: normal;
+        .forecast-item {
+            display: inline-table;
+            width: 230px;
+            padding: 12px 15px;
+            .title {
+                margin:0;
+                font-size:1.25rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                
+            }
+            .icon {
+                margin: 5px;
+                img {
+                    border: 0;
+                    background: #fff;
+                    border-radius: 22px;
+                    padding: 8px;
+                    width: 30px;
+                }
+            }
+            p {
+                margin: 0;
+                letter-spacing: .9px;
+                font-weight: normal;
+                font-size: 1.1em;
+                
+            }
+        }
+    }
+}

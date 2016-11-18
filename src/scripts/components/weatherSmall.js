@@ -6,7 +6,7 @@ var create = function(selector) {
 
 
     comp.updateWeather = () => {
-        var url = "/api/weather/conditions/53051";
+        var url = "/api/weather/conditions/Menomonee Falls";
         ajax({url}).then(comp.render);
     }
     
@@ -21,6 +21,11 @@ var create = function(selector) {
 
     setInterval(comp.updateWeather, 60000)
     comp.updateWeather();
+
+    comp.container.addEventListener("click", () => {
+        comp.container.classList.add("active");
+        window.location.href = "/forecast"
+    });
     return comp;
 }; 
 

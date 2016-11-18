@@ -7,16 +7,45 @@ html {
     font-family:"Simplifica";
     src: url("../assets/fonts/simplifica.ttf") /* TTF file for CSS3 browsers */
 }
+
 body {
     min-height: 100%;
     font-family: "Simplifica", sans-serif;
     text-align: center;
     position:relative;
     font-weight: 100;
-}
+    cursor:none;
 
+    a:visited,
+    a:active,
+    a:hover {
+        cursor:none;
+    }
+}
+$top: 10px;
+$bottom: 5px;
+$side: 15px;
+
+#back-button {
+    position: fixed;
+    top: 5px;
+    left: -5px;
+    z-index: 2;
+    a {
+        text-decoration: none;
+        color: #7e7e7e;
+        font-size: 4rem;
+        font-weight: 100;
+        padding: 0 15px;
+
+        &:active {
+            color: #ddd;
+        }
+    }
+}
 .main-content {
     text-align: center;
 }
 
-@import "home"
+@import "home";
+@import "forecast"
