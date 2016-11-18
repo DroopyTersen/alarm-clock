@@ -10,7 +10,7 @@ hbs.registerPartials(__dirname + '/src/views/partials');
 app.use(bodyParser.json());
 app.set('env', "development");
 app.set('view cache', false);
-app.set('views', './src/views');
+app.set('views', __dirname + '/src/views');
 app.set('view engine', 'hbs');
 
 app.use('/dist', express.static('dist'));
