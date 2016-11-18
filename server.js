@@ -13,8 +13,8 @@ app.set('view cache', false);
 app.set('views', __dirname + '/src/views');
 app.set('view engine', 'hbs');
 
-app.use('/dist', express.static('dist'));
-app.use('/assets', express.static('assets'));
+app.use('/dist', express.static(__dirname + '/dist'));
+app.use('/assets', express.static(__dirname + '/assets'));
 
 app.get("/favicon.ico", (req, res) => res.sendStatus(200));
 require("./src/routes").configure(app);
