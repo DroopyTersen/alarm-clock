@@ -32,7 +32,7 @@ var create = function(selector) {
         comp.container.innerHTML = html;
     };
 
-    var url = "/api/calendar?start=11-21-2016";
+    var url = "/api/calendar";
     ajax({url}).then(comp.render);
     return comp;
 }; 

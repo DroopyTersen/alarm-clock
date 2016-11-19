@@ -19,7 +19,7 @@ var create = function(selector) {
         comp.container.innerHTML = html;
     };
 
-    setInterval(comp.updateWeather, 60000)
+    setInterval(comp.updateWeather, 200000)
     comp.updateWeather();
 
     comp.container.addEventListener("click", () => {
