@@ -36,6 +36,15 @@ body {
 .main-content {
   text-align: center; }
 
+#home #calendar-link {
+  position: fixed;
+  bottom: 10px;
+  left: 13px;
+  font-size: 1.5rem; }
+  #home #calendar-link a {
+    text-decoration: none;
+    color: #767676; }
+
 #home #time {
   letter-spacing: 6px;
   color: #887c4f;
