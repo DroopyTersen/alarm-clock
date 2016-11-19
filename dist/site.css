@@ -133,3 +133,46 @@ body {
       letter-spacing: .9px;
       font-weight: normal;
       font-size: 1.1em; }
+
+#calendar #time {
+  letter-spacing: 4px;
+  color: #887c4f;
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  position: relative;
+  top: 10px; }
+
+#calendar #date {
+  text-align: right;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  letter-spacing: 4px;
+  font-size: 1.5rem; }
+  #calendar #date .day {
+    text-transform: uppercase; }
+
+#calendar #calendar-events {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  font-weight: normal; }
+  #calendar #calendar-events .calendar-day {
+    display: inline-table;
+    width: 230px;
+    padding: 12px 15px; }
+    #calendar #calendar-events .calendar-day .title {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+    #calendar #calendar-events .calendar-day .event {
+      width: 100%;
+      margin: 12px 0; }
+      #calendar #calendar-events .calendar-day .event .subject {
+        font-size: 1rem;
+        font-weight: bold; }
+      #calendar #calendar-events .calendar-day .event .time {
+        color: #887c4f; }

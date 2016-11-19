@@ -3,5 +3,6 @@ module.exports = {
     date: require("./date"),
     weatherSmall: require("./weatherSmall"),
     stockTicker: require("./stockTicker"),
-    forecast: require("./forecast")
+    forecast: require("./forecast"),
+    calendar: require("./calendar")
 }

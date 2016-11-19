@@ -1,0 +1,57 @@
+$top: 10px;
+$bottom: 5px;
+$side: 15px;
+
+#calendar {
+    #time {
+        letter-spacing: 4px;
+        color: #887c4f;
+        font-size: 3rem;
+        font-weight: normal;
+        margin:0;
+        position:relative;
+        top:$top;
+    } 
+    #date {
+        text-align: right;
+        position: fixed;
+        top: $top;
+        right: $side;
+        letter-spacing: 4px;
+        font-size: 1.5rem;
+        .day {
+            text-transform: uppercase;
+        }
+    }
+    #calendar-events {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        font-weight: normal;
+        .calendar-day {
+            display: inline-table;
+            width: 230px;
+            padding: 12px 15px;
+            .title {
+                margin:0;
+                font-size:1.5rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                
+            }
+            .event {
+                width: 100%;
+                margin: 12px 0;
+
+                .subject {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .time {
+                   color: #887c4f
+                }
+            }
+        }
+    }
+}

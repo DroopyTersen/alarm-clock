@@ -111,7 +111,8 @@
 	    date: __webpack_require__(115),
 	    weatherSmall: __webpack_require__(116),
 	    stockTicker: __webpack_require__(119),
-	    forecast: __webpack_require__(122)
+	    forecast: __webpack_require__(122),
+	    calendar: __webpack_require__(123)
 	};
 
 /***/ },
@@ -15215,6 +15216,41 @@
 	    };
 	
 	    var url = "/api/weather/forecast/Menomonee Falls";
+	    ajax({ url: url }).then(comp.render);
+	    return comp;
+	};
+	
+	module.exports = { create: create };
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var ajax = __webpack_require__(117);
+	var dom = __webpack_require__(1);
+	var moment = __webpack_require__(4);
+	
+	var create = function create(selector) {
+	    var comp = {};
+	    comp.container = dom.findOne(selector);
+	
+	    var eventToHtml = function eventToHtml(event) {
+	        var time = moment(event.start).format('LT') + " - " + moment(event.end).format('LT');
+	        return "\n        <div class='event'>\n            <div class='subject'>" + event.subject + "</div>\n            <div class='time'>" + time + "</div>\n        </div>\n        ";
+	    };
+	    var calendarDayToHtml = function calendarDayToHtml(day) {
+	        return "\n        <div class='calendar-day'>\n            <h4 class='title'>" + moment(new Date(day.title)).format('dddd') + "</h4>\n            <div class='events'>\n            " + day.events.map(eventToHtml).join("") + "\n            </div>\n        </div> \n        ";
+	    };
+	
+	    comp.render = function (days) {
+	        console.log(days);
+	        var html = days.map(calendarDayToHtml).join("");
+	        comp.container.innerHTML = html;
+	    };
+	
+	    var url = "/api/calendar?start=11-21-2016";
 	    ajax({ url: url }).then(comp.render);
 	    return comp;
 	};
