@@ -1,9 +1,8 @@
 var bodyParser = require("body-parser");
 var express = require("express");
 var hbs = require("hbs");
-var config = { port: process.env.PORT || 3000 };
+var config = { port: process.env.PORT || 3001 };
 var app = express();
-
 
 hbs.registerPartials(__dirname + '/src/views/partials');
 // we need the body parser so we can get at the POST body that Amazon sends
