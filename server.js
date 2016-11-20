@@ -1,7 +1,7 @@
 var bodyParser = require("body-parser");
 var express = require("express");
 var hbs = require("hbs");
-var config = { port: process.env.PORT || 3001 };
+var config = { port: process.env.PORT || 3000 };
 var app = express();
 
 hbs.registerPartials(__dirname + '/src/views/partials');
