@@ -20,7 +20,9 @@ exports.configure = function(app) {
 
 iot.subscribe("get-calendar", function(payload, event) {
     payload = payload || {};
-    getCalendar(payload.start, payload.end).then(cal => event.respond(cal));
+    getCalendar(payload.start, payload.end).then(cal => {
+        event.respond(cal)
+    });
 });
 
 var getCalendar = function(start, end) {
